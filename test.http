@@ -1,0 +1,39 @@
+
+POST http://localhost:80/api/bets
+content-type: application/json
+Host: bets-app.com.br
+apiKey: 3zXTXg91NMjdxKIbE8Z8Th1RyZCfpl3k
+
+{
+    "match": "1X-DC",
+    "email": "joe@doe.com",
+    "championship": "Uefa Champions League",
+    "awayTeamScore": "2"
+}
+
+###
+
+POST http://localhost:80/api/bets
+content-type: application/json
+Host: bets-app.com.br
+apiKey: a6hJZ6ffJFGsJzMyTgTAwZOUdH6QMEkW
+
+{
+    "match": "1X-DC",
+    "email": "joe@doe.com",
+    "championship": "Uefa Champions League",
+    "awayTeamScore": "2"
+}
+
+###
+POST http://localhost:80/api/bets
+content-type: application/json
+Host: bets-app.com.br
+Authorization: Basic am86YWRtaW4=
+
+{
+    "match": "1X-DC",
+    "email": "joe@doe.com",
+    "championship": "Uefa Champions League",
+    "awayTeamScore": "2"
+}
