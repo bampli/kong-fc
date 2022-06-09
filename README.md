@@ -35,8 +35,6 @@ Na pasta raiz do projeto voce pode executar
 docker-compose -f compose/kong_compose.yml up -d
 ```
 
-##### docker-compose -f compose/kong_compose.yml ps
-
 ```
                Name                             Command                  State                                                               Ports                                                        
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
