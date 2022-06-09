@@ -1,7 +1,7 @@
 #!/bin/sh
 
 KONG=localhost
-if [$#=1 ]; then
+if [ $1 ]; then
   KONG=$1
 fi
 curl --request POST \
