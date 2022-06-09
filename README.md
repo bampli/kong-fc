@@ -35,6 +35,11 @@ Na pasta raiz do projeto voce pode executar
 docker-compose -f compose/kong_compose.yml up -d
 ```
 
+E para ver containers:
+```
+watch docker-compose -f compose/kong_compose.yml ps
+```
+
 ```
                Name                             Command                  State                                                               Ports                                                        
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
