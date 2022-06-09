@@ -35,48 +35,6 @@ services:
       retries: 5
 
   ###
-  ### Inicio do banco de dados
-  ### Esse container ira realizar as criacoes iniciais das tabelas necessarias para
-  ### armazenamento das configuracoes do Kong
-  ###
-  kong-migration-bootstrap:
-    image: claudioed/kong-fc
-    deploy:
-      restart_policy:
-        condition: on-failure
-    networks:
-      - kong-fc
-    depends_on:
-      - kong-database
-    environment:
-      - KONG_DATABASE=postgres
-      - KONG_PG_HOST=kong-database
-      - KONG_PG_USER=kong
-      - KONG_PG_PASSWORD=kong
-    command: kong migrations bootstrap
-
-  ###
-  ### Inicio do banco de dados
-  ### Esse container ira realizar as configuracoes iniciais das tabelas necessarias para
-  ### armazenamento das configuracoes do Kong
-  ###
-  kong-migration-up:
-    image: claudioed/kong-fc
-    networks:
-      - kong-fc
-    deploy:
-      restart_policy:
-        condition: on-failure
-    depends_on:
-      - kong-database
-    environment:
-      - KONG_DATABASE=postgres
-      - KONG_PG_HOST=kong-database
-      - KONG_PG_USER=kong
-      - KONG_PG_PASSWORD=kong
-    command: kong migrations up
-
-  ###
   ### Kong API Gateway
   ### Container com o runtime do Kong API Gateway
   ###
@@ -306,3 +264,49 @@ services:
       - COLLECTOR_ZIPKIN_HOST_PORT=9411
     networks:
       - kong-fc
+
+ # jmrl 2020.06.09
+ # persistindo Kong DB em "/pgdata"
+ # eliminando inicialização automática
+
+  ###
+  ### Inicio do banco de dados
+  ### Esse container ira realizar as criacoes iniciais das tabelas necessarias para
+  ### armazenamento das configuracoes do Kong
+  ###
+  # kong-migration-bootstrap:
+  #   image: claudioed/kong-fc
+  #   deploy:
+  #     restart_policy:
+  #       condition: on-failure
+  #   networks:
+  #     - kong-fc
+  #   depends_on:
+  #     - kong-database
+  #   environment:
+  #     - KONG_DATABASE=postgres
+  #     - KONG_PG_HOST=kong-database
+  #     - KONG_PG_USER=kong
+  #     - KONG_PG_PASSWORD=kong
+  #   command: kong migrations bootstrap
+
+  ###
+  ### Inicio do banco de dados
+  ### Esse container ira realizar as configuracoes iniciais das tabelas necessarias para
+  ### armazenamento das configuracoes do Kong
+  ###
+  # kong-migration-up:
+  #   image: claudioed/kong-fc
+  #   networks:
+  #     - kong-fc
+  #   deploy:
+  #     restart_policy:
+  #       condition: on-failure
+  #   depends_on:
+  #     - kong-database
+  #   environment:
+  #     - KONG_DATABASE=postgres
+  #     - KONG_PG_HOST=kong-database
+  #     - KONG_PG_USER=kong
+  #     - KONG_PG_PASSWORD=kong
+  #   command: kong migrations up

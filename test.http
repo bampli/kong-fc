@@ -2,7 +2,6 @@
 POST http://localhost:80/api/bets
 content-type: application/json
 Host: bets-app.com.br
-apiKey: 3zXTXg91NMjdxKIbE8Z8Th1RyZCfpl3k
 
 {
     "match": "1X-DC",
@@ -16,7 +15,7 @@ apiKey: 3zXTXg91NMjdxKIbE8Z8Th1RyZCfpl3k
 POST http://localhost:80/api/bets
 content-type: application/json
 Host: bets-app.com.br
-apiKey: a6hJZ6ffJFGsJzMyTgTAwZOUdH6QMEkW
+apiKey: Ij6TSWYlZi1iGmKCzSzVSyJT6feLveAN
 
 {
     "match": "1X-DC",
