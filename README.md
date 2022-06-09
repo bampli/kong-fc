@@ -34,7 +34,6 @@ Na pasta raiz do projeto voce pode executar
 ```shell
 docker-compose -f compose/kong_compose.yml up -d
 ```
-### Status
 
 ##### docker-compose -f compose/kong_compose.yml ps
 
