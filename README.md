@@ -1,5 +1,7 @@
 # Ambiente Kong API Gateway
 
+![image](https://user-images.githubusercontent.com/86032/172924240-8bb2c59f-bb2f-4345-9a70-4a821f35d82e.png)
+
 Ambiente de execucao do Kong API Gateway usando ferramenta docker-compose
 
 ## Ferramentas necessarias
