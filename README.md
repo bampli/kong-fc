@@ -34,13 +34,11 @@ Na pasta raiz do projeto voce pode executar
 ```shell
 docker-compose -f compose/kong_compose.yml up -d
 ```
-### docker-compose ps
+### Status
 
 #### docker-compose -f compose/kong_compose.yml ps
 
 ```
-docker-compose -f compose/kong_compose.yml ps
-WARNING: Some services (bets, championships, kong, kong-database, kong-migration-bootstrap, kong-migration-up, konga, matches, players) use the 'deploy' key, which will be ignored. Compose does not support 'deploy' configuration - use `docker stack deploy` to deploy to a swarm.
                Name                             Command                  State                                                               Ports                                                        
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 compose_bets_1                       ./application                    Up             0.0.0.0:9999->9999/tcp,:::9999->9999/tcp                                                                             
