@@ -36,7 +36,7 @@ docker-compose -f compose/kong_compose.yml up -d
 ```
 ### Status
 
-#### docker-compose -f compose/kong_compose.yml ps
+##### docker-compose -f compose/kong_compose.yml ps
 
 ```
                Name                             Command                  State                                                               Ports                                                        
