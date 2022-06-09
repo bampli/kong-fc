@@ -68,3 +68,17 @@ node_exporter                        /bin/node_exporter               Up        
 prometheus                           /bin/prometheus --config.f ...   Up             0.0.0.0:9090->9090/tcp,:::9090->9090/tcp
 
 ```
+
+## UI Links
+
+Grafana Dashboard for Kong https://grafana.com/grafana/dashboards/7424
+
+
+Konga   http://localhost:1337/#!/dashboard
+
+Grafana http://localhost:3000/d/mY9p7dQmz/kong-official?orgId=1
+
+Keycloak http://localhost:8080/auth/
+
+Kibana http://localhost:5601/app/discover
+
